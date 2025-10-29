@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBA Discord Advertisement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Intro Section -->
+  <div class="container">
+    <h1 class="custom-header">TBA Discord Server</h1>
+    <h2 class="custom-subhead">We want YOU to join us!</h2>
+
+    <div class="flex-center">
+      <img class="img-fluid" src="erik-mclean-G3CcxmXGmmo-unsplash.jpg" alt="Person pointing at you" height="400" width="250" />
+      <button aria-label="Join our Discord server" id="join-discord" class="btn btn-primary">
+        Join Us Now
+      </button>
+      <a href="#reasons-section" class="btn btn-outline">Why join? Here's Why?</a>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Reasons Section -->
+  <div class="container" id="reasons-section">
+    <h1 class="custom-header">Why should you join us?</h1>
+
+    <p class="custom-paragraph scroll-fade">
+      It's a great community where you can make new friends, meet people, build connections and just have a good time!
+    </p>
+    <img class="img-fluid community" src="hannah-busing-Zyx1bK9mqmA-unsplash.jpg" alt="Community members laughing together" />
+
+    <p class="custom-paragraph scroll-fade">
+      Into programming or Discord bots? You’re in the right place. Explore development, testing, and tech with passionate peers.
+    </p>
+    <img class="img-fluid code" src="photo-1515879218367-8466d910aaa4.jpeg" alt="Laptop screen with code displayed" />
+
+    <p class="custom-paragraph scroll-fade">
+      Experience an adventurous text-based bot in beta. Play, contribute ideas, and shape its future with your feedback!
+    </p>
+    <div class="flex-center">
+      <img class="img-fluid dragon" src="pexels-berendey-1420462.jpg" alt="Cartoon dragon and knight battle" />
+      <button class="btn btn-success" onclick="window.location.href='https://discord.gg/CdP9dH4X';">
+        So, what are you waiting for? Join Now!!
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("join-discord").addEventListener("click", function () {
+      window.location.href = "https://discord.gg/CdP9dH4X";
+    });
+
+    // Basic scroll animation
+    const fadeElems = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    fadeElems.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
