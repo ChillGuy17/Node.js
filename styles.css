@@ -1,0 +1,182 @@
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: #000;
+  background-image: url("pexels-krisof-1252890.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white; /* 🧶 Makes default text white */
+  position: relative;
+  z-index: 1;
+}
+
+/* Brighter overlay with higher transparency */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.3); /* 💡 Lower opacity makes background lighter */
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.custom-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin: 30px 0;
+}
+
+.custom-subhead {
+  font-size: 1.75rem;
+  color: white;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.custom-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  padding: 0 20px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: white;
+  max-width: 90%;
+  margin: 60px auto;
+  transition: background-color 0.3s ease;
+}
+
+.section-divider:hover {
+  background-color: #ccc;
+}
+
+.img-fluid {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+@media (min-width: 768px) {
+  .custom-header {
+    font-size: 4rem;
+  }
+
+  .custom-subhead {
+    font-size: 2rem;
+  }
+
+  .custom-paragraph {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    padding: 15px 35px;
+  }
+
+  .img-fluid {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-header {
+    font-size: 2rem;
+  }
+
+  .custom-subhead {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
